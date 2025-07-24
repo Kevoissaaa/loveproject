@@ -1,0 +1,154 @@
+body {
+
+    background-color: #ffe6f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 400px;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.header h1 {
+
+    color: #d63384;
+
+}
+
+.MessageBox {
+
+
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+
+
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ff85a2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #e05977;
+}
+
+.footer {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.fade-in
+ { 
+    opacity: 1; 
+    transition: opacity 0.5s ease; 
+}
+
+.fade-out
+ { 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+ }
+
+.controls {
+ display: flex; 
+justify-content: center;
+ gap: 10px;
+align-items: center;
+ }
+
+button:disabled  { 
+
+opacity: 0.5; 
+cursor: default; 
+
+}
+
+.background {
+  background-image: url('photo_2025-07-24_16-47-50.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.love-title {
+
+  color: white;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.5); /* soft overlay */
+  padding: 20px;
+  border-radius: 15px;
+
+}
+
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.left-side {
+  left: 0;
+}
+
+.right-side {
+  right: 0;
+}
+
+.floating-hearts::before,
+.floating-hearts::after {
+  content: '💖 💘 💝 💗 💓 💞 💕 💟';
+  position: absolute;
+  font-size: 2rem;
+  white-space: nowrap;
+  opacity: 0.3;
+  animation: floatHearts 10s linear infinite;
+}
+
+.floating-hearts::after {
+  top: 50%;
+  animation-delay: 5s;
+  font-size: 1.5rem;
+  opacity: 0.2;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
+
+
+
+
